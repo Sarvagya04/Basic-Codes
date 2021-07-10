@@ -1,1 +1,32 @@
 # Basic-Codes
+
+
+# Digit root
+# Write a program to find the repeated sum of digits of a number until it becomes a single-digit number.
+
+```
+# include<iostream>
+using namespace std;
+int digSum(int n)
+{
+    int sum = 0;
+    while(n > 0 || sum > 9)
+    {
+        if(n == 0)
+        {
+            n = sum;
+            sum = 0;
+        }
+        sum += n % 10;
+        n /= 10;
+    }
+    return sum;
+}
+int main()
+{
+    int n;
+  std::cin>>n;
+  std::cout << digSum(n);
+    return 0;
+}
+```
