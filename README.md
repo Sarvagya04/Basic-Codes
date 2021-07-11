@@ -51,3 +51,28 @@ int main()
  return 0;
 }
 ```
+# Q3 Raju has a square-shaped puzzle made up of small square pieces containing numbers on them. He wants to rearrange the puzzle by changing the elements of a row into a column element and column element into a row element. Help Raju to solve this puzzle.
+```
+#include<iostream>
+int main()
+{
+    // Type your code here
+  int rows, cols, a1[10][10], a2[10][10];
+std::cin>>rows;
+std::cin>>cols;
+for (int i = 0;i<rows;i++ ) {
+for (int j = 0;j < cols;j++ ) {
+std::cin>>a1[i][j];
+}
+}
+ for(int i=0;i<cols;i++)
+ {
+  for(int j=0;j<rows;j++)
+   {
+     std::cout<<a1[j][i]<<" ";
+   }
+   std::cout<<"\n";
+ }
+  return 0;
+}
+```
